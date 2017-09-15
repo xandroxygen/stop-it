@@ -1,8 +1,8 @@
 {
   "name": "stop-it",
-  "version": "0.0.0",
-  "description": "Hello Expo!",
-  "author": null,
+  "version": "0.0.1",
+  "description": "Track your organ registrations",
+  "author": "Xander Moffatt",
   "private": true,
   "main": "node_modules/expo/AppEntry.js",
   "dependencies": {
