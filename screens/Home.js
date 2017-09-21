@@ -11,7 +11,7 @@ class Home extends React.Component {
   render() {
     return (
       <Container>
-        <Content contentContainerStyle={styles.container}>
+        <Content contentContainerStyle={styles.container} scrollEnabled={false}>
           {this.props.show && <Text>Hello World!</Text>}
           <Button
             text="Toggle"
