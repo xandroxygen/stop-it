@@ -2,6 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 import { pressButton } from "../actions"
 import styles from "../config/styles"
+import colors from "../config/colors"
 import { Text, View } from "react-native"
 import { Container, Content } from "native-base"
 import Button from "../components/Button"
@@ -12,7 +13,11 @@ class Home extends React.Component {
       <Container>
         <Content contentContainerStyle={styles.container}>
           {this.props.show && <Text>Hello World!</Text>}
-          <Button text="Toggle" onPress={this.props.toggleText} />
+          <Button
+            text="Toggle"
+            style={{ backgroundColor: colors.buttonBackground }}
+            onPress={this.props.toggleText}
+          />
         </Content>
       </Container>
     )

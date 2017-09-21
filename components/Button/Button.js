@@ -3,9 +3,9 @@ import { Button, Text } from "native-base"
 import styles from "./styles"
 
 const MyButton = props => {
-  const { text, onPress } = props
+  const { text, onPress, style } = props
   return (
-    <Button style={styles.button} onPress={onPress}>
+    <Button style={[styles.button, style]} onPress={onPress}>
       <Text style={styles.buttonText}>{text}</Text>
     </Button>
   )
