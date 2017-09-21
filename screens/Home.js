@@ -3,15 +3,18 @@ import { connect } from "react-redux"
 import { pressButton } from "../actions"
 import styles from "../config/styles"
 import { Text, View } from "react-native"
+import { Container, Content } from "native-base"
 import Button from "../components/Button"
 
 class Home extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        {this.props.show && <Text>Hello World!</Text>}
-        <Button text="Toggle" onPress={this.props.toggleText} />
-      </View>
+      <Container>
+        <Content contentContainerStyle={styles.container}>
+          {this.props.show && <Text>Hello World!</Text>}
+          <Button text="Toggle" onPress={this.props.toggleText} />
+        </Content>
+      </Container>
     )
   }
 }
