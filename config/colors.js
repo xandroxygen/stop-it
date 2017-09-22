@@ -1,7 +1,10 @@
 export default {
+  // Main Colors
   background: "#F5F2F9",
-  errorText: "#FA3256",
-  headerText: "#444444",
-  buttonBackground: "#39BD98",
-  buttonText: "#FFFFFF",
+  primary: "#1F875A",
+  secondary: "#23577E",
+  tertiary: "#C4842D",
+  complementary: "#C4582D",
+  // Text
+  text: "#444444",
 }

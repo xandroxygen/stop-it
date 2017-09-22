@@ -9,7 +9,7 @@ export default StyleSheet.create({
     alignSelf: "auto",
   },
   buttonText: {
-    color: colors.buttonText,
+    color: "white",
     fontSize: 16,
     fontWeight: "500",
   },
