@@ -6,6 +6,8 @@ import { reducer } from "./reducers"
 import styles from "./config/styles"
 import Home from "./screens/Home"
 
+const store = createStore(reducer)
+
 export default class App extends React.Component {
   constructor() {
     super()
@@ -24,7 +26,6 @@ export default class App extends React.Component {
   }
 
   render() {
-    const store = createStore(reducer)
     if (!this.state.isReady) {
       return <Expo.AppLoading />
     }
