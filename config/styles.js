@@ -7,13 +7,4 @@ export default StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  homeScreen: {
-    padding: 20,
-    paddingTop: 50,
-    backgroundColor: colors.background,
-  },
-  logoText: {
-    fontFamily: "ProximaNovaSemiBold",
-    fontSize: 46,
-  },
 })
