@@ -22,6 +22,9 @@ export default class App extends React.Component {
       Roboto: require("native-base/Fonts/Roboto.ttf"),
       Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
     })
+    await Expo.Asset.loadAsync([
+      require("./assets/icons/stop-it-icon-transparent.png"),
+    ])
 
     this.setState({ isReady: true })
   }

@@ -3,6 +3,7 @@ import { connect } from "react-redux"
 import { pressButton } from "../actions"
 import styles from "../config/styles"
 import colors from "../config/colors"
+import images from "../config/images"
 import { Text, View, Image } from "react-native"
 import { Content } from "native-base"
 import Button from "../components/Button"
@@ -13,10 +14,7 @@ class Home extends React.Component {
   render() {
     return (
       <Content contentContainerStyle={styles.container} scrollEnabled={false}>
-        <Image
-          source={require("../assets/icons/stop-it-icon-transparent.png")}
-          style={{ width: 150, height: 175 }}
-        />
+        <Image source={images.appLogo} style={{ width: 150, height: 175 }} />
         <MenuButton
           text="Add a Registration"
           textColor={colors.secondaryDarkest}
