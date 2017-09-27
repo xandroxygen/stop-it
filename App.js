@@ -26,9 +26,7 @@ export default class App extends React.Component {
       ProximaNovaSemiBold: require("./assets/fonts/proximanova-semibold-webfont.ttf"),
       ProximaNovaLight: require("./assets/fonts/proximanova-light-webfont.ttf"),
     })
-    await Expo.Asset.loadAsync([
-      require("./assets/icons/stop-it-icon-transparent.png"),
-    ])
+    await Expo.Asset.loadAsync([require("./assets/icons/app-icon.png")])
 
     this.setState({ isReady: true })
   }

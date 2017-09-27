@@ -7,8 +7,8 @@
     "sdkVersion": "20.0.0",
     "version": "0.0.1",
     "orientation": "portrait",
-    "primaryColor": "#cccccc",
-    "icon": "./assets/icons/app-icon.png",
+    "primaryColor": "#1F875A",
+    "icon": "./assets/icons/loading-icon.png",
     "loading": {
       "icon": "./assets/icons/loading-icon.png",
       "hideExponentText": false
