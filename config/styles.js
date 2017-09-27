@@ -13,7 +13,7 @@ export default StyleSheet.create({
     backgroundColor: colors.background,
   },
   logoText: {
-    fontWeight: "500",
+    fontFamily: "ProximaNovaSemiBold",
     fontSize: 46,
   },
 })

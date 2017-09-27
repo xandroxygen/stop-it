@@ -21,6 +21,10 @@ export default class App extends React.Component {
     await Expo.Font.loadAsync({
       Roboto: require("native-base/Fonts/Roboto.ttf"),
       Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
+      ProximaNova: require("./assets/fonts/proximanova-regular-webfont.ttf"),
+      ProximaNovaBold: require("./assets/fonts/proximanova-bold-webfont.ttf"),
+      ProximaNovaSemiBold: require("./assets/fonts/proximanova-semibold-webfont.ttf"),
+      ProximaNovaLight: require("./assets/fonts/proximanova-light-webfont.ttf"),
     })
     await Expo.Asset.loadAsync([
       require("./assets/icons/stop-it-icon-transparent.png"),
