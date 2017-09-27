@@ -4,8 +4,16 @@ import colors from "./colors"
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.background,
     alignItems: "center",
     justifyContent: "center",
+  },
+  homeScreen: {
+    padding: 20,
+    paddingTop: 50,
+    backgroundColor: colors.background,
+  },
+  logoText: {
+    fontWeight: "500",
+    fontSize: 46,
   },
 })

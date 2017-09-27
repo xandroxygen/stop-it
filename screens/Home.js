@@ -13,17 +13,26 @@ import { MaterialIcons } from "@expo/vector-icons"
 class Home extends React.Component {
   render() {
     return (
-      <Content contentContainerStyle={styles.container} scrollEnabled={false}>
-        <Image source={images.appLogo} style={{ width: 150, height: 175 }} />
-        <MenuButton
-          text="Add a Registration"
-          textColor={colors.secondaryDarkest}
-        >
-          <MaterialIcons name="add" size={70} color={colors.secondary} />
-        </MenuButton>
-        <MenuButton text="Registration List" textColor={colors.tertiaryDarkest}>
-          <MaterialIcons name="list" size={70} color={colors.tertiary} />
-        </MenuButton>
+      <Content
+        contentContainerStyle={[styles.container, styles.homeScreen]}
+        scrollEnabled={false}
+      >
+        <Image source={images.appLogo} style={{ width: 100, height: 115 }} />
+        <Text style={styles.logoText}>stop it</Text>
+        <View style={styles.container}>
+          <MenuButton
+            text="Add a Registration"
+            textColor={colors.secondaryDarkest}
+          >
+            <MaterialIcons name="add" size={70} color={colors.secondary} />
+          </MenuButton>
+          <MenuButton
+            text="Registration List"
+            textColor={colors.tertiaryDarkest}
+          >
+            <MaterialIcons name="list" size={70} color={colors.tertiary} />
+          </MenuButton>
+        </View>
       </Content>
     )
   }
