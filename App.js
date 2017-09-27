@@ -1,6 +1,7 @@
 import React from "react"
 import Expo from "expo"
 import { Provider } from "react-redux"
+import { Container } from "native-base"
 import { createStore } from "redux"
 import { reducer } from "./reducers"
 import styles from "./config/styles"
@@ -31,7 +32,9 @@ export default class App extends React.Component {
     }
     return (
       <Provider store={store}>
-        <Home />
+        <Container>
+          <Home />
+        </Container>
       </Provider>
     )
   }

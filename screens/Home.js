@@ -3,8 +3,8 @@ import { connect } from "react-redux"
 import { pressButton } from "../actions"
 import styles from "../config/styles"
 import colors from "../config/colors"
-import { Text, View } from "react-native"
-import { Container, Content } from "native-base"
+import { Text, View, Image } from "react-native"
+import { Content } from "native-base"
 import Button from "../components/Button"
 import MenuButton from "../components/MenuButton"
 import { MaterialIcons } from "@expo/vector-icons"
@@ -12,16 +12,21 @@ import { MaterialIcons } from "@expo/vector-icons"
 class Home extends React.Component {
   render() {
     return (
-      <Container>
-        <Content contentContainerStyle={styles.container} scrollEnabled={false}>
-          <MenuButton text="Add" textColor={colors.primary}>
-            <MaterialIcons name="add" size={100} color={colors.primary} />
-          </MenuButton>
-          <MenuButton text="List" textColor={colors.secondary}>
-            <MaterialIcons name="list" size={100} color={colors.secondary} />
-          </MenuButton>
-        </Content>
-      </Container>
+      <Content contentContainerStyle={styles.container} scrollEnabled={false}>
+        <Image
+          source={require("../assets/icons/stop-it-icon-transparent.png")}
+          style={{ width: 150, height: 175 }}
+        />
+        <MenuButton
+          text="Add a Registration"
+          textColor={colors.secondaryDarkest}
+        >
+          <MaterialIcons name="add" size={70} color={colors.secondary} />
+        </MenuButton>
+        <MenuButton text="Registration List" textColor={colors.tertiaryDarkest}>
+          <MaterialIcons name="list" size={70} color={colors.tertiary} />
+        </MenuButton>
+      </Content>
     )
   }
 }
