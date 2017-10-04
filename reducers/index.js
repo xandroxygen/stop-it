@@ -1,5 +1,5 @@
 const initialState = {
-  show: true,
+  currentPage: "HOME",
 }
 
 export const reducer = (state = initialState, action) => {
@@ -7,8 +7,10 @@ export const reducer = (state = initialState, action) => {
   const newState = Object.assign({}, state)
 
   switch (type) {
-    case "PRESS_BUTTON":
-      newState.show = !newState.show
+    case "ADD_REGISTRATION":
+      newState.currentPage = "ADD_REG"
+    case "VIEW_REGISTRATION":
+      newState.currentPage = "LIST_REG"
   }
 
   return newState

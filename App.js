@@ -6,6 +6,7 @@ import { createStore } from "redux"
 import { reducer } from "./reducers"
 import styles from "./config/styles"
 import Home from "./screens/Home"
+import Navigator from "./config/routes"
 
 const store = createStore(reducer)
 
@@ -38,7 +39,7 @@ export default class App extends React.Component {
     return (
       <Provider store={store}>
         <Container>
-          <Home />
+          <Navigator />
         </Container>
       </Provider>
     )

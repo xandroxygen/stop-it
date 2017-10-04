@@ -1,3 +1,7 @@
-export const pressButton = {
-  type: "PRESS_BUTTON",
+export const addRegistration = {
+  type: "ADD_REGISTRATION",
+}
+
+export const viewRegistrations = {
+  type: "VIEW_REGISTRATION",
 }

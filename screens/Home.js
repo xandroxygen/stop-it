@@ -15,6 +15,9 @@ const styles = StyleSheet.create({
     paddingTop: 50,
     backgroundColor: colors.background,
   },
+  menu: {
+    justifyContent: "center",
+  },
   logoText: {
     fontFamily: "ProximaNovaSemiBold",
     fontSize: 46,
@@ -26,6 +29,20 @@ const styles = StyleSheet.create({
 })
 
 class Home extends React.Component {
+  handlePressAddRegistration = () => {
+    console.log("add registration pressed")
+    this.props.navigation.navigate("AddRegistration", {
+      title: "Add a Registration",
+    })
+  }
+
+  handlePressRegistrationList = () => {
+    console.log("registration list pressed")
+    this.props.navigation.navigate("RegistrationList", {
+      title: "My Registrations",
+    })
+  }
+
   render() {
     return (
       <Content
@@ -34,16 +51,18 @@ class Home extends React.Component {
       >
         <Image source={images.appLogo} style={styles.logo} />
         <Text style={styles.logoText}>stop it</Text>
-        <View style={defaultStyles.container}>
+        <View style={[defaultStyles.container, styles.menu]}>
           <MenuButton
             text="Add a Registration"
             textColor={colors.secondaryDarkest}
+            onPress={this.handlePressAddRegistration}
           >
             <MaterialIcons name="add" size={70} color={colors.secondary} />
           </MenuButton>
           <MenuButton
             text="Registration List"
             textColor={colors.tertiaryDarkest}
+            onPress={this.handlePressRegistrationList}
           >
             <MaterialIcons name="list" size={70} color={colors.tertiary} />
           </MenuButton>
