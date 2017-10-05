@@ -5,8 +5,8 @@ import styles from "./styles"
 const MyButton = props => {
   const { text, onPress, style } = props
   return (
-    <Button style={[styles.button, style]} onPress={onPress}>
-      <Text style={styles.buttonText}>{text}</Text>
+    <Button style={[styles.button, style.button]} onPress={onPress}>
+      <Text style={[styles.text, style.text]}>{text}</Text>
     </Button>
   )
 }
