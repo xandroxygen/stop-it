@@ -1,8 +1,8 @@
 import React from "react"
 import { Text, StatusBar, StyleSheet } from "react-native"
 import { View, Content } from "native-base"
-import Button from "../components/Button"
-import defaultStyles from "../config/styles"
+import Button from "../components/Button/Button"
+import Container from "../components/Container/Container"
 import colors from "../config/colors"
 
 const navButtonStyle = {
@@ -12,9 +12,6 @@ const navButtonStyle = {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    paddingTop: StatusBar.currentHeight,
-  },
   frame: {
     flex: 1,
   },
@@ -32,10 +29,6 @@ const styles = StyleSheet.create({
   },
 })
 
-const containerStyle = StyleSheet.create({
-  paddingTop: StatusBar.currentHeight,
-})
-
 class AddRegistration extends React.Component {
   handlePressCancel = () => {
     this.props.navigation.goBack(null)
@@ -46,10 +39,7 @@ class AddRegistration extends React.Component {
 
   render() {
     return (
-      <Content
-        contentContainerStyle={[defaultStyles.container, containerStyle]}
-        scrollEnabled={false}
-      >
+      <Container fullScreen={true}>
         <Text>Add Registration</Text>
         <View style={styles.frame}>
           <Text>frame</Text>
@@ -70,7 +60,7 @@ class AddRegistration extends React.Component {
             onPress={this.handlePressSave}
           />
         </View>
-      </Content>
+      </Container>
     )
   }
 }

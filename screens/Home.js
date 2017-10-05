@@ -1,12 +1,11 @@
 import React from "react"
 import { connect } from "react-redux"
 import { pressButton } from "../actions"
-import defaultStyles from "../config/styles"
 import colors from "../config/colors"
 import images from "../config/images"
 import { Text, View, Image, StyleSheet } from "react-native"
-import { Content } from "native-base"
-import MenuButton from "../components/MenuButton"
+import Container from "../components/Container/Container"
+import MenuButton from "../components/MenuButton/MenuButton"
 import { MaterialIcons } from "@expo/vector-icons"
 
 const styles = StyleSheet.create({
@@ -45,13 +44,10 @@ class Home extends React.Component {
 
   render() {
     return (
-      <Content
-        contentContainerStyle={[defaultStyles.container, styles.homeScreen]}
-        scrollEnabled={false}
-      >
+      <Container style={styles.homeScreen}>
         <Image source={images.appLogo} style={styles.logo} />
         <Text style={styles.logoText}>stop it</Text>
-        <View style={[defaultStyles.container, styles.menu]}>
+        <Container style={styles.menu}>
           <MenuButton
             text="Add a Registration"
             textColor={colors.secondaryDarkest}
@@ -66,8 +62,8 @@ class Home extends React.Component {
           >
             <MaterialIcons name="list" size={70} color={colors.tertiary} />
           </MenuButton>
-        </View>
-      </Content>
+        </Container>
+      </Container>
     )
   }
 }
